@@ -193,3 +193,56 @@ public class CodingPatterns {
         }
     }
 }
+
+
+//    ////////////Print the Butterfly Pattern ///////////////
+
+                // *             *
+                // * *         * *
+                // * * *     * * *
+                // * * * * * * * *
+                // * * * * * * * *
+                // * * *     * * *
+                // * *         * *
+                // *             *
+
+public class CodingPatterns{
+    public static void main(String args[]){
+        int n = 5;
+        //upper half part
+        for(int i=1; i<=n; i++){
+            //left part of upper half 
+            for(int j=1; j<=i; j++){
+                System.out.print("* ");
+            }
+            //spaces
+            int spaces=2*(n-i);
+            for(int k=1; k<=spaces; k++){
+                System.out.print("  ");
+            }
+            //right part of upper half
+            for(int l=1; l<=i; l++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+        //lower half part
+        for(int i=n; i>=1; i--){
+            //left part of lower half
+            for(int j=1; j<=i; j++){
+                System.out.print("* ");
+            }
+            //spaces
+            int spaces = 2*(n-i);
+            for(int k=1; k<=spaces; k++){
+                System.out.print("  ");
+            }
+            //right part of lower half
+            for(int l=1; l<=i; l++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
