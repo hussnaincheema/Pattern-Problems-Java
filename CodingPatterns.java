@@ -539,3 +539,42 @@ public class CodingPatterns{
         }
     }
 }
+
+
+// // // // //    ////////////Print the Given Pattern ///////////////
+
+
+                    &                &
+                      &            &
+                        &        &
+                          &    &
+                            & 
+
+
+public class CodingPatterns {
+    public static void main(String[] args) {
+        int n = 5;
+
+        for (int i = 1; i <= n; i++) {
+            // Print leading spaces
+            for (int j = 1; j < i; j++) {
+                System.out.print("  ");
+            }
+            // Print "&" symbol
+            System.out.print("&");
+
+            // Print spaces between the two "&" symbols
+            for (int j = 1; j <= 2 * (n - i); j++) {
+                System.out.print("  ");
+            }
+
+            // Print second "&" symbol, except in the last line
+            if (i != n) {
+                System.out.print("&");
+            }
+
+            // Move to the next line
+            System.out.println();
+        }
+    }
+}
