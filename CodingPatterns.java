@@ -452,3 +452,59 @@ public class CodingPatterns{
     }
 }
 
+
+// // // //    ////////////Print the Given Pattern ///////////////
+
+
+                                1 2 3 4 5 6
+                                  1 2 3 4 5
+                                    1 2 3 4
+                                      1 2 3 
+                                        1 2 
+                                          1
+
+
+public class CodingPatterns{
+    public static void main(String args[]){
+        int n=6;
+        for(int i=n; i>=1; i--){
+            //for spaces
+            for(int s=1; s<=n-i; s++){
+                System.out.print("  ");//two spaces
+            }
+            //Numbers
+            for(int j=1; j<=i; j++){
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+// // // //    ////////////Print the Given Pattern ///////////////
+
+                            1 2 3 4 5 6
+                             1 2 3 4 5
+                              1 2 3 4
+                               1 2 3
+                                1 2
+                                 1
+
+public class CodingPatterns {
+    public static void main(String[] args) {
+        int n = 6; 
+
+        for (int i = n; i >= 1; i--) {
+            //spaces
+            for (int j = 0; j < n - i; j++) {
+                System.out.print(" ");//One Space
+            }
+            //Numbers
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+}
