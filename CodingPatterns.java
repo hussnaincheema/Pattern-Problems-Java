@@ -600,3 +600,29 @@ public class CodingPatterns{
         }
     }
 }
+
+
+// // // // // //    ////////////Print the Given Pattern ///////////////
+
+
+                        1 2 4 6
+                        2 2 4 6
+                        3 2 4 6
+                        4 2 4 6
+
+public class CodingPatterns {
+    public static void main(String args[]){
+        int n=4;
+        for(int i=1; i<=n; i++){
+            System.out.print(i + " ");
+
+            for(int j=1; j<n; j++){
+                System.out.print(j*2 + " ");
+            }
+            System.out.println();
+        }
+    }
+    
+}
+
+
