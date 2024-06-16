@@ -813,3 +813,107 @@ public class CodingPatterns{
         }
     }
 }
+
+
+// // // // // // // //    ////////////Print the Given Pattern ///////////////
+
+
+                                    A
+                                    A B
+                                    A B C
+                                    A B C D
+                                    A B C D E
+
+public class CodingPatterns{
+    public static void main(String args[]){
+        int n=5;
+        for(int i=1; i<=n; i++){
+            for (char ch = 'A'; ch < 'A' + i; ch++){
+                System.out.print(ch + " ");
+            }
+            System.out.println();
+        }
+
+    }
+}
+
+// // // // // // // // //    ////////////Print the Given Pattern ///////////////
+
+
+                                    1
+                                    3 5
+                                    7 9 11
+                                    13 15 17 19
+                                    21 23 25 27 29
+                                    31 33 35 37 39 41
+                                    43 45 47 49 51 53 55
+
+
+public class CodingPatterns{
+    public static void main(String[] args) {
+        int n=7;
+        int num=1;
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=i; j++){
+                System.out.print(num + " ");
+                num +=2;
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+// // // // // // // // //    ////////////Print the Given Pattern ///////////////
+
+
+                                1234567654321
+                                123456 654321
+                                12345   54321
+                                1234     4321
+                                123       321
+                                12         21
+                                1           1
+
+
+
+    public class NumberPattern {
+    public static void main(String[] args) {
+        int n = 7; // Number of rows
+
+        // Loop through each row
+        for (int i = 1; i <= n; i++) {
+            // Print increasing numbers
+            for (int j = 1; j <= n - i + 1; j++) {
+                System.out.print(j);
+            }
+
+            // Print spaces
+            for (int j = 1; j < 2 * (i - 1); j++) {
+                System.out.print(" ");
+            }
+
+            // Print decreasing numbers using if-else 
+            for (int j = n - i + 1; j >= 1; j--) {
+                if (i != 1 || j != n - i + 1) {  // To avoid printing the last number twice in the first row
+                    System.out.print(j);
+                }
+            }
+
+            // ANOTHER WAY TO PRINT RIGHT SIDE
+            // if(i!=1){
+            //     for (int j = n-i+1; j >= 1; j--) {
+            //         System.out.print(j);
+            //     }
+            // }else{
+            //     for (int j = n-i; j >= 1; j--) {
+            //         System.out.print(j);
+            //     }
+            // }
+            
+
+            // Move to the next line
+            System.out.println();
+        }
+    }
+}
