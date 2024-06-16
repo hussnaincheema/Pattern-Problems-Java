@@ -626,3 +626,120 @@ public class CodingPatterns {
 }
 
 
+// // // // // //    ////////////Print the Given Pattern ///////////////
+
+
+                            #####*#####
+                            ####*#*####
+                            ###*###*###
+                            ##*#####*##
+                            #*#######*#
+                            *#########*
+
+
+public class CodingPatterns{
+    public static void main(String args[]){
+        int n=6;
+        for(int i=1; i<=n; i++){
+            //Print leading Hashes
+            for(int j=1; j<=n-i; j++){
+                System.out.print("# ");
+            }
+            //Print the First Star
+            System.out.print("* ");
+            //Print middle Hashes
+            for(int j=1; j<2*(i-1); j++){
+                System.out.print("# ");
+            }
+
+            //Print Second Star If not the First row
+            if(i!=1){
+                System.out.print("* ");
+            }
+
+            //Print Trailing Hashes
+            for(int j=1; j<=n-i; j++){
+                System.out.print("# ");
+            }
+
+            //Move to the Next Line
+            System.out.println();
+        }
+    }
+}
+
+
+// // // // // // //    ////////////Print the Given Pattern ///////////////
+
+
+                            #####*#####
+                            ####*#*####
+                            ###*###*###
+                            ##*#####*##
+                            #*#######*#
+                            *#########*
+                            *#########*
+                            #*#######*#
+                            ##*#####*##
+                            ###*###*###
+                            ####*#*####
+                            #####*#####
+
+
+public class CodingPatterns{
+    public static void main(String args[]){
+        int n=6;
+        //For Upper Half Pattern
+        for(int i=1; i<=n; i++){
+            //Print leading Hashes
+            for(int j=1; j<=n-i; j++){
+                System.out.print("# ");
+            }
+            //Print the First Star
+            System.out.print("* ");
+            //Print middle Hashes
+            for(int j=1; j<2*(i-1); j++){
+                System.out.print("# ");
+            }
+
+            //Print Second Star If not the First row
+            if(i!=1){
+                System.out.print("* ");
+            }
+
+            //Print Trailing Hashes
+            for(int j=1; j<=n-i; j++){
+                System.out.print("# ");
+            }
+
+            //Move to the Next Line
+            System.out.println();
+        }
+        //For Lower pattern
+        for(int i=n; i>=1; i--){
+            //Print leading Hashes of Bottom part
+            for(int j=1; j<=n-i; j++){
+                System.out.print("# ");
+            }
+            //Print the First Star of Bottom part
+            System.out.print("* ");
+            //Print middle Hashes
+            for(int j=1; j<2*(i-1); j++){
+                System.out.print("# ");
+            }
+
+            //Print Second Star of Bottom part If not the First row
+            if(i!=1){
+                System.out.print("* ");
+            }
+
+            //Print Trailing Hashes of Bottom part
+            for(int j=1; j<=n-i; j++){
+                System.out.print("# ");
+            }
+
+            //Move to the Next Line for Bottom part
+            System.out.println();
+        }
+    }
+}
