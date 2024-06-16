@@ -990,6 +990,43 @@ public class CodingPatterns{
             System.out.println();
         }
     }
+
+
+  // // // // // // // // //    ////////////Print the Given Pattern ///////////////
+
+
+
+                                    --------
+                                   --------
+                                    --------
+                                   --------
+                                    --------
+                                   --------
+                                    --------
+                                   --------
+
+public class CodingPatterns {
+    public static void main(String[] args) {
+        int n = 8; // Number of rows
+
+        // Loop through each row
+        for (int i = 1; i <= n; i++) {
+
+            // Print leading spaces for odd rows
+            if (i % 2 == 1) {
+                System.out.print(" ");
+            }
+            
+            // Print the rest of the line
+            for (int j = 1; j <= n; j++) {
+                System.out.print("-");
+            }
+
+            // Move to the next line after each row is printed
+            System.out.println();
+        }
+    }
+}
 }
 
 
