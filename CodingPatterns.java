@@ -743,3 +743,73 @@ public class CodingPatterns{
         }
     }
 }
+
+
+// // // // // // // //    ////////////Print the Given Pattern ///////////////
+
+
+                                BBBBBBBBB
+                                 BBBBBBB
+                                  BBBBB
+                                   BBB
+                                    B
+
+public class CodingPatterns{
+    public static void main(String args[]){
+        int n=5;
+        for(int i=1; i<=n; i++){
+            //Leading Spaces
+            for(int j=1; j<i; j++){
+                System.out.print(" ");
+            }
+            //Print B
+            for(int j=1; j<=2*(n-i)+1; j++){
+                System.out.print("B");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+// // // // // // // //    ////////////Print the Given Digit Pyramid ///////////////
+
+                                                    1
+                                                   232
+                                                  34543
+                                                 4567654
+                                                567898765
+                                               67890109876
+                                              7890123210987
+                                             890123454321098
+                                            90123456765432109
+                                           0123456789876543210
+
+
+public class CodingPatterns{
+    public static void main(String args[]){
+        int  n=10;
+        for(int i=1; i<=n; i++){
+            //For Leading Spaces
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            // Print increasing numbers
+            int num = i;
+            for (int j = 1; j <= i; j++) {
+                System.out.print(num % 10);
+                num++;
+            }
+
+            // Print decreasing numbers
+            num -= 2;
+            for (int j = 1; j < i; j++) {
+                System.out.print(num % 10);
+                num--;
+            }
+
+            // Move to the next line
+            System.out.println();
+        }
+    }
+}
