@@ -917,3 +917,80 @@ public class CodingPatterns{
         }
     }
 }
+
+
+// // // // // // // // //    ////////////Print the Given Pattern ///////////////
+
+
+
+
+                                                        &
+                                                       & &
+                                                      &   &
+                                                     &     &
+                                                    &       &
+                                                   &         &
+                                                  &           &
+                                                 &             &
+                                                &               &
+                                               &&&&&&&&&&&&&&&&&&&
+
+
+public class CodingPatterns{
+    public static void main(String[] args) {
+        int n=10;
+        for(int i=1; i<=n; i++){
+            //Spaces
+            for(int j=n-i; j>=1; j--){
+                System.out.print(" ");
+            }
+            //Print the First &
+            System.out.print('&');
+
+            //Print inner Spaces
+            if(i!=1){
+            for(int j=1; j<2*(i-1); j++){
+                System.out.print(" ");
+            }
+
+            //Print the Second &
+            System.out.print('&');
+        }
+            System.out.println();
+            
+        }
+
+        // Print the last row with '&' symbols
+        for (int i = 1; i <= 2 * n - 1; i++) {
+            System.out.print("&");
+        }
+        System.out.println();
+    }
+}
+
+
+// // // // // // // // //    ////////////Print the Given Pattern ///////////////
+
+
+                                    0
+                                    0 1
+                                    0 1 2
+                                    0 1 2 3
+                                    0 1 2 3 4
+                                    0 1 2 3 4 5
+
+
+public class CodingPatterns{
+    public static void main(String[] args) {
+        int n = 6;
+        for(int i=1; i<=n; i++){
+            for(int j=0; j<i; j++){
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
